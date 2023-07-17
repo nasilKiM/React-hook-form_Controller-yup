@@ -34,9 +34,10 @@ const LoginHookForm = () => {
   }, []);
 
   const onSubmit = (info) => console.log(info);
+  const onError = (info) => console.log(info);
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form onSubmit={handleSubmit(onSubmit, onError)}>
       <ControlledInput
         control={control}
         name={"email"}
@@ -60,7 +61,7 @@ const LoginHookForm = () => {
 
 export default LoginHookForm;
 
-const Form = styled.div`
+const Form = styled.form`
   width: 100%;
 `;
 

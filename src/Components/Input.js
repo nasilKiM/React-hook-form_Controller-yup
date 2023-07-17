@@ -17,7 +17,7 @@ const ControlledInput = ({ name, control, defaultValue, ...rest }) => {
             <CustomInput
               name={name}
               {...rest}
-              hasError={!!error}
+              hasError={!!error} // boolean 값으로 바꾸는
               value={value}
               onBlur={onBlur}
               onChange={onChange}
